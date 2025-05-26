@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tyylit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Mystery+Quest&family=Rancho&display=swap" rel="stylesheet">
+    <title>Sikanoppapeli</title>
+</head>
+<body>
+    <section class="otsikko">
+        <h1>Sikanoppapeli</h1>
+    </section>
+
+    <section id="valikko">
+        <div class="keskita">
+            <label>Pelaajien määrä: <input type="number" id="pelaajat" min="1" max="10" value="1"></label>
+            <label>Noppien määrä:
+                <select id="noppienmaara">
+                    <option value="1">1 noppaa</option>
+                    <option value="2">2 noppaa</option>
+                </select>
+            </label>
+        </div>
+    </section>
+
+    <div class="aloitusnappi">
+        <button onclick="aloitaPeli()">Aloita</button>
+    </div>
+
+    <section id="peli">
+        <p id="vuoro"></p>
+        <div id="nopankuvat">
+            <img id="dice1" class="dice" src="dice-1.webp" alt="Noppa 1">
+            <img id="dice2" class="dice" src="dice-1.webp" alt="Noppa 2" style="display:none;">
+        </div>
+    </section>
+
+    <section>
+        <div class="tulostaulu">
+            <p id="silmaluku">Silmäluku:</p>
+            <p id="tulokset">Tulokset:</p>
+        </div>
+    </section>
+
+    <section class="napit">
+        <button onclick="heita()">Heitä noppaa</button>
+        <button onclick="lopetaVuoro()">Lopeta vuoro</button>
+    </section>
+    <div class="viestiKentta">
+        <p id="viesti">Onnea peliin!</p>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
