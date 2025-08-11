@@ -16,7 +16,7 @@
 
     <section id="valikko">
         <div class="keskita">
-            <label>Pelaajien määrä: <input type="number" id="pelaajat" min="1" max="10" value="1"></label>
+            <label>Pelaajien määrä: <input type="number" id="pelaajat" min="1" max="10" value="1" onchange="luoNimikentat()"></label>
             <label>Noppien määrä:
                 <select id="noppienmaara">
                     <option value="1">1 noppaa</option>
@@ -24,6 +24,7 @@
                 </select>
             </label>
         </div>
+        <div id="nimikentat" class="keskita" style="margin-top:10px;"></div>
     </section>
 
     <div class="aloitusnappi">
@@ -39,19 +40,21 @@
     </section>
 
     <section>
-        <div class="tulostaulu">
+        <div class="tulostaulu" id="tulostaulu">
             <p id="silmaluku">Silmäluku:</p>
             <p id="tulokset">Tulokset:</p>
         </div>
     </section>
 
-    <section class="napit">
+    <section class="napit" id="napit">
         <button onclick="heita()">Heitä noppaa</button>
         <button onclick="lopetaVuoro()">Lopeta vuoro</button>
     </section>
+
     <div class="viestiKentta">
         <p id="viesti">Onnea peliin!</p>
     </div>
+
 <script src="main.js"></script>
 </body>
 </html>

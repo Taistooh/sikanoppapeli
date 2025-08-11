@@ -116,15 +116,17 @@ button:active {
 
 .napit {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    visibility: hidden;
 }
 
 .napit button {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .viestiKentta {
